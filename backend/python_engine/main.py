@@ -2,16 +2,21 @@ import sys
 import os
 from brain import EnvisBrain
 
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 def main():
     # FORCED OVERRIDE for User Session (Google Gemini)
     provider = "google" 
     model = "gemini-1.5-flash" 
-    # Forcing API Key as well to ensure it picks up the correct one
-    api_key = "AIzaSyAG8v4UUN6Tvt9vKMyKRPUfggDlddKWXjw"
+    # Use environment variable for API Key
+    api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
     user_name = os.getenv("ENVIS_USER_NAME", "User")
 
     if not api_key:
-        print("ERROR: API Key is missing. Please configure it in settings.")
+        print("ERROR: API Key is missing. Please configure GOOGLE_API_KEY in .env")
         return
 
     # Initialize Brain
