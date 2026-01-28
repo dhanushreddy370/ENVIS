@@ -1,0 +1,29 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+backend/python_engine/venv/
+backend/python_engine/.env
+
+# Environment
+.env
+.env.local
+.DS_Store
+
+# Build
+dist/
+dist-ssr/
+coverage/
+
+# IDE
+.vscode/
+.idea/
+
+# Interview Prep
+explanation.txt

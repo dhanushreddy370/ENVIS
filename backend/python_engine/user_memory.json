@@ -1,0 +1,9 @@
+{
+    "user_details": {
+        "name": "User",
+        "preferences": {},
+        "jokes": [],
+        "context": "System initialized. Waiting for user interaction."
+    },
+    "memories": []
+}
